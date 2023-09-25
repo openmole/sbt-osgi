@@ -44,8 +44,9 @@ private object Osgi {
     failOnUndecidedPackage: Boolean,
     sourceDirectories: Seq[File],
     packageOptions: scala.Seq[sbt.PackageOption],
-    streams: TaskStreams,
-    useJVMJar: Boolean): File = {
+    useJVMJar: Boolean,
+    streams: TaskStreams): File = {
+
     val builder = new Builder
 
     if (failOnUndecidedPackage) {

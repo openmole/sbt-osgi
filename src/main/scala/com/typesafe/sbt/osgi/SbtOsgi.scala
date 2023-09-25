@@ -52,8 +52,8 @@ object SbtOsgi extends AutoPlugin {
         failOnUndecidedPackage.value,
         (sourceDirectories in Compile).value,
         (packageOptions in (Compile, packageBin)).value,
-        streams.value,
-        packageWithJVMJar.value),
+        packageWithJVMJar.value,
+        streams.value),
       Compile / sbt.Keys.packageBin := bundle.value,
       manifestHeaders := OsgiManifestHeaders(
         bundleActivator.value,
